@@ -13,11 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class DemoClassAutomation {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		// System.setProperty("webdriver.chrome.driver",
-		// "C:\\Users\\kajal\\Documents/chromedriver.exe");
 
-//		create object
 		// ChromeDriver driver = new ChromeDriver();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://accounts.google.com/");
@@ -46,7 +42,7 @@ public class DemoClassAutomation {
 		personalUseOption.click();
 		System.out.println("Account clicked.");
 
-//		WebElement enterfname = driver.findElement(By.id("firstName"));
+		// WebElement enterfname = driver.findElement(By.id("firstName"));
 		WebElement enterfname = driver.findElement(By.xpath("//input[@aria-label='First name']"));
 		enterfname.sendKeys("Test");
 		// Thread.sleep(3000);
@@ -129,7 +125,8 @@ public class DemoClassAutomation {
 		System.out.println("Num Entered Clicked");
 
 		WebDriverWait wait_next1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement nextBut1 = wait_next.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Next']"))));
+		WebElement nextBut1 = wait_next
+				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Next']"))));
 		nextBut1.click();
 		System.out.println("NextBut Clicked");
 
